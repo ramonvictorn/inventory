@@ -14,3 +14,15 @@ Após baixar o projeto rodar os comandos:
 $ npm install
 $ node app.js
 ```
+
+
+
+
+
+Configurações Back-end:
+
+Routes:
+/
+/login
+/cadastro
+/consulta
