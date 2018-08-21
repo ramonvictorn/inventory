@@ -2,20 +2,33 @@
     <head>
         <title>Cadastro de patrimônios</title>
         <script src="http://localhost:8080/static/script/jquery/jquery-3.3.1.min.js"></script>
-       
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </head>
     <body>
             <form >
-                <select name="tipos">
-                  <option value="volvo">Computador</option>
-                  <option value="saab">Notebook</option>
-                  <option value="fiat">Monitor</option>
-                  <option value="audi">Projetor</option>
-                  <option value="audi">Mesa digitalizadora</option>
-                  <option value="audi">Câmera</option>
+                <h4 class="col-2">Selecione um equipamento</h4>
+                <select class="form-control col-2 tipos">
+                        <option value="null" hidden>equipamentos</option>
+                        <option value="pc">Computador</option>
+                        <option value="note">Notebook</option>
+                        <option value="monitor">Monitor</option>
+                        <option value="projetor">Projetor</option>
+                        <option value="mesa">Mesa digitalizadora</option>
+                        <option value="camera">Câmera</option>  
                 </select>
-                <br><br>
-                <input type="submit">
-              </form>
+            </form>
+            <form class="cadastro">
+                <div class="form-group pc" style="display:none">
+                    <label for="patrimonioUfsc">Patrimônio Ufsc</label>
+                    <input type="text" class="form-control-sm" id="patrimonioUfsc" placeholder="Digite aqui">
+                    <label for="patrimonioLantec">Patrimônio Ufsc</label>
+                    <input type="text" class="form-control-sm" id="patrimonioLantec" placeholder="">
+                    
+                </div>
+            </form>
     </body>
+    <script src="http://localhost:8080/static/script/cadastro.js"></script>
 </html>
