@@ -1,9 +1,10 @@
 var selecionado;
+start();
 
 function start(){ 
-    //$('.padraoPatrimonios').hide();
+    $('.padraoPatrimonios').hide();
 }
-start();
+
 
 $('.tipos').change(function() {
     selecionado = $(this).val();
@@ -12,18 +13,20 @@ $('.tipos').change(function() {
 })
 
 function selecao(){
-    if(selecionado == 'pc'){
-        console.log('form pc render');
-        //renderPc();
+    if(selecionado != 'null'){
         renderAllPatrimonios()
     }
 }
 
 function renderAllPatrimonios(){
-    $('.padraoPatrimonios').css("display", "block");
+    $('.padraoPatrimonios').show();
 }
 
 function renderPc(){
-    //$('.pc').show();
-    renderAllPatrimonios()
 }
+
+
+function getValues(){
+    var object = {};
+
+return object;}

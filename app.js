@@ -14,7 +14,7 @@ app.use('/static', express.static('web/'));
 
 app.get('/', function(req, res) {
     console.log('/ acessada');
-    res.send('rota / acessada');
+    res.render('index');
 });
 
 app.get('/login', function(req, res) {
