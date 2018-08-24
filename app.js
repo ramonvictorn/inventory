@@ -23,10 +23,14 @@ app.get('/login', function(req, res) {
     res.render('login', {name: 'ramon'});
 })
 
+
+var greetings = require("./core/functions/mysql");
+console.log(greetings.consultaStart);
+greetings.consultaInicial();
 app.get('/cadastro', function(req, res) {
     console.log('/cadastrar acessada');
     //res.send('rota cadastrar acessada');
-    res.render('cadastro');
+    res.render('cadastro', {tipos: ['pc', 'note']});
 });
 
 app.get('/consulta', function(req, res) {
