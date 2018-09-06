@@ -26,12 +26,18 @@ app.get('/login', function(req, res) {
 
 var greetings = require("./core/functions/mysql");
 console.log(greetings.consultaStart);
-greetings.consultaInicial();
+
 app.get('/cadastro', function(req, res) {
     console.log('/cadastrar acessada');
+    greetings.consultaInicial(function() {res.render('cadastro', {tipos: ['pc', 'note']});});
+    console.log('func chamada render aqui');
     //res.send('rota cadastrar acessada');
-    res.render('cadastro', {tipos: ['pc', 'note']});
+    
 });
+
+app.post('/ajax/getTipos', function (req, res) {
+    res.json({tipos: ['pc', 'note']});
+})
 
 app.get('/consulta', function(req, res) {
     console.log('/consultar acessada');

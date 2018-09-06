@@ -22,9 +22,10 @@ var exports = module.exports = {};
 
 
   //funcao que consulta as info de cadastro inicial
-  exports.consultaStart = "deu";
+  exports.consultaStart = "dp Ok";
 
 
-  exports.consultaInicial = function(){
-    console.log('consulta iniciada');
+  exports.consultaInicial = function(cb){
+    setTimeout(function(){ console.log('consulta inicial mysql.js feita'); cb() }, 0);
+    console.log('consulta sendo feita mysql.js')
   }

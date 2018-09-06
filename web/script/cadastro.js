@@ -1,22 +1,28 @@
 
-//bt próximo
-$( "#proximo" ).on("click",prox);
 
-
-//select de equipamentos
-$('.tipos').change(function() {
-    var selecionado = $(this).val();
-     console.log(selecionado);
-     selecao(selecionado);
- })
  
-//
+//depois do documento carregado, a func start é feita
+$( document ).ready(start);
 
-
-start();
 
 function start(){ 
     $('.padraoPatrimonios').hide();
+    $( "#proximo" ).on("click",prox);
+
+    //select de tipos de equipamentos
+    $('.tipos').change(function() {
+        var selecionado = $(this).val();
+        console.log(selecionado);
+        selecao(selecionado);
+    })
+
+    $.ajax({
+        type: "POST",
+        url: "/ajax/getTipos",
+        success: function(data){console.log(data)},
+        dataType: "json",
+        error: function(err){console.log(err)}
+    });
 }
 
 
