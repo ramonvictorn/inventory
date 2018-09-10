@@ -16,13 +16,32 @@ function start(){
         selecao(selecionado);
     })
 
-    $.ajax({
+    var req = $.ajax({
         type: "POST",
         url: "/ajax/getTipos",
         success: function(data){console.log(data)},
         dataType: "json",
         error: function(err){console.log(err)}
-    });
+    })
+    .done(function() {
+        alert( "second success" );
+        console.log(req.status);
+      })
+    ;
+
+    var req2 = $.ajax({
+        type: "POST",
+        url: "/ajax/getResponsavelUfsc",
+        success: function(data){console.log('dataaaaaa', data )},
+        dataType: "json",
+        error: function(err){console.log(err,'erro aqui')}
+    })
+    .done(function() {
+        alert( "second success" );
+        console.log(req.status);
+      })
+    ;
+    
 }
 
 
