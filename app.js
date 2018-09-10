@@ -7,7 +7,7 @@ const routes = require('./core/routes/routes.js');
 // app.engine('html',ejs.renderFile);
 // //permitir acesso ao Js e css
 // app.use('/static', express.static('web/'));
-// //finish
+// //finish2
 
 
 
