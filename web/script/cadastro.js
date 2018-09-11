@@ -1,10 +1,8 @@
 
-
- 
 //depois do documento carregado, a func start é feita
 $( document ).ready(start);
 
-
+var tipos = '';
 function start(){ 
     $('.padraoPatrimonios').hide();
     $( "#proximo" ).on("click",prox);
@@ -16,44 +14,41 @@ function start(){
         selecao(selecionado);
     })
 
-    var req = $.ajax({
-        type: "POST",
-        url: "/ajax/getTipos",
-        success: function(data){console.log(data)},
-        dataType: "json",
-        error: function(err){console.log(err)}
-    })
-    .done(function() {
-        alert( "second success" );
-        console.log(req.status);
-      })
-    ;
-
-    var req2 = $.ajax({
-        type: "POST",
-        url: "/ajax/getResponsavelUfsc",
-        success: function(data){console.log('dataaaaaa', data )},
-        dataType: "json",
-        error: function(err){console.log(err,'erro aqui')}
-    })
-    .done(function() {
-        alert( "second success" );
-        console.log(req.status);
-      })
-    ;
+    getTipos(insertOption);
     
 }
 
+function getTipos(call){
+    var req = $.ajax({
+        type: "POST",
+        url: "/getTiposPatrimonios",
+        success: function(data){console.log(data); tipos = data},
+        dataType: "json",
+        error: function(err){console.log(err)}
+    })
+    .done(function(data) {
+        console.log('done feito' , req.status);
+        call();
+      })
+    ;
+}
 
+function insertOption(){
+    console.log('callchamado');
+    $.each(tipos, function(key, value) {   
+        $('.tipos')
+            .append($("<option></option>")
+                       .attr("value",value)
+                       .text(value)); 
+   });
+}
 
 //chama a func dependendo do valor do select
 function selecao(selecionado){
     if(selecionado != 'null'){
         renderAllPatrimonios()
     }
-    if(selecionado == 'pc'){
-        
-    }
+    
 }
 
 //mostras os campos padroes para todos os patrimonios
@@ -61,14 +56,9 @@ function renderAllPatrimonios(){
     $('.padraoPatrimonios').show();
 }
 
-//renderiza os campos do pc
-function renderPc(){
-}
 
-//pega os values dos inputs padrao e retorna
-function getValuesPadrao(){
-    var object = {};
-return object;}
+
+
 
 
 //function para para bt proximo

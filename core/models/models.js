@@ -2,6 +2,6 @@ exports.getTiposPatrimonios = getTiposPatrimonios;
 
 
 
-function getTiposPatrimonios(){
-    return "ramon deu certo"
+function getTiposPatrimonios(req,res){
+    res.render('cadastro')
 }

@@ -9,7 +9,7 @@ function index(req,res){
 }
 
 function cadastro(req,res){
-    res.send(models.getTiposPatrimonios());
+    models.getTiposPatrimonios(req,res);
     console.log('rota /cadastro acessada')
     
 }

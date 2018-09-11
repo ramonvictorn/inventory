@@ -6,6 +6,7 @@ function init(app){
     app.get('/', controllers.index);
     
     app.get('/cadastro', controllers.cadastro);
+
     
     // app.get('/login', function(req, res) {
     //     console.log('/login acessada');
