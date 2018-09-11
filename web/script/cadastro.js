@@ -35,12 +35,15 @@ function getTipos(call){
 
 function insertOption(){
     console.log('callchamado');
-    $.each(tipos, function(key, value) {   
+    console.log(tipos);
+   $.each(tipos, function (index,value) {
+        console.log('value ,', value.tipo)
         $('.tipos')
             .append($("<option></option>")
-                       .attr("value",value)
-                       .text(value)); 
-   });
+                       .attr("value",value.tipo)
+                       .text(value.tipo)); 
+});
+
 }
 
 //chama a func dependendo do valor do select

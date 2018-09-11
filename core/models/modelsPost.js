@@ -3,12 +3,12 @@ exports.getTiposPatrimonios = getTiposPatrimonios;
 var mysql= require('../../core/mysql');
 
 function getTiposPatrimonios(req,res){
-    res.send(['pc', 'notee']);
-    res.statusCode = 404;
-    mysql.dbInit(queryTipos);
+    
+    
+    mysql.dbInit(queryTipos,req,res);
 }
 
-function queryTipos(con){
+function queryTipos(con,req,res){
     console.log('query iniciada aqui')
     con.query("SELECT * FROM tipo_patrimonio", function (err, result, fields) {
         if (err) {
@@ -16,6 +16,9 @@ function queryTipos(con){
           console.log('erro :', err)
       }else{
           console.log(result, 'result aqui');
+        //   res.send(['pc', 'notee','ramon']);
+            res.send(result);
+          res.statusCode = 404;
       }
        
       });

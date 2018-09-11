@@ -5,7 +5,7 @@ exports.dbInit = dbInit;
 exports.con = con;
 
 var con;
-function dbInit(call){
+function dbInit(call,req,res){
         con = mysql.createConnection({
         host: "localhost",
         user: "inventario",
@@ -13,10 +13,10 @@ function dbInit(call){
         database: "inventory"
       });
       
-      teste(call);
+      teste(call,res,res);
 }
 
-function teste(call){
+function teste(call,req,res){
     con.connect(function(err) {
         if (err) throw err;
         con.query("SELECT * FROM tipo_patrimonio", function (err, result, fields) {
@@ -24,8 +24,8 @@ function teste(call){
             throw err;
             console.log('erro :', err)
         }else{
-            console.log(result, 'con aqui', con);
-            call(con);
+            console.log(result, 'con aqui');
+            call(con,req,res);
         }
          
         });
