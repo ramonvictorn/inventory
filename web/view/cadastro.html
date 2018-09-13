@@ -3,6 +3,8 @@
         <title>Cadastro de patrimônios</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8"> 
+        <!--Tag do bootstrap para deixar página responsiva-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="http://localhost:8080/static/script/jquery/jquery-3.3.1.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -12,6 +14,42 @@
         
     </head>
     <body>
+        <h5 class="text-center">Cadastro de Patrimônios</h5>
+
+        <!--Menu de navegação das páginas-->
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="index">Início</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastrar</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="cadastro">Patrimônios</a>
+                        <a class="dropdown-item" href="#">Pessoas</a>
+                        <a class="dropdown-item" href="login">Logins</a>
+                        <a class="dropdown-item" href="#">Locais</a>
+                        <a class="dropdown-item" href="#">Responsáveis</a>
+                        <a class="dropdown-item" href="#">Tipos de Patrimônios</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pesquisar</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="consulta">Patrimônios</a>
+                        <a class="dropdown-item" href="#">Pessoas</a>
+                        <a class="dropdown-item" href="#">Logins</a>
+                        <a class="dropdown-item" href="#">Locais</a>
+                        <a class="dropdown-item" href="#">Responsáveis</a>
+                        <a class="dropdown-item" href="#">Tipo de Patrimônio</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!--Fim do menu de navegação das páginas-->
+
         <div class="container">
             <form class="form-group row ">
                 <div class="col-3"></div>

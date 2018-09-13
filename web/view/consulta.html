@@ -1,8 +1,86 @@
 <html>
     <head>
-        <title>Consulta de patrimônios</title>
+		<title>Consulta de Patrimônios</title>
+		<meta charset="utf-8"> 
+		<!--Tag do bootstrap para deixar página responsiva-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--Link do bootstrap css-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     </head>
     <body>
-        Consulta de patrimônios
+    	<h5 class="text-center">Consulta de Patrimônios</h5>
+
+		<!--Menu de navegação das páginas-->
+		<ul class="nav justify-content-center">
+			<li class="nav-item">
+				<a class="nav-link" href="index">Início</a>
+			</li>
+			<li class="nav-item">
+				<div class="dropdown">
+					<a class="nav-link dropdown-toggle" href="#" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastrar</a>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="cadastro">Patrimônios</a>
+						<a class="dropdown-item" href="#">Pessoas</a>
+						<a class="dropdown-item" href="login">Logins</a>
+						<a class="dropdown-item" href="#">Locais</a>
+						<a class="dropdown-item" href="#">Responsáveis</a>
+						<a class="dropdown-item" href="#">Tipos de Patrimônios</a>
+					</div>
+				</div>
+			</li>
+			<li class="nav-item">
+				<div class="dropdown">
+					<a class="nav-link dropdown-toggle" href="#" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pesquisar</a>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="consulta">Patrimônios</a>
+						<a class="dropdown-item" href="#">Pessoas</a>
+						<a class="dropdown-item" href="#">Logins</a>
+						<a class="dropdown-item" href="#">Locais</a>
+						<a class="dropdown-item" href="#">Responsáveis</a>
+						<a class="dropdown-item" href="#">Tipo de Patrimônio</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<!--Fim do menu de navegação das páginas-->
+
+		<!--Campo e botão de pesquisa-->
+		<div class="input-group mb-3">
+			<input type="text" class="form-control" placeholder="O que deseja pesquisar?" aria-label="search" aria-describedby="button-addon2">
+			<div class="input-group-append">
+				<button class="btn btn-outline-secondary" type="button" id="button-addon2">Pesquisar</button>
+			</div>
+		</div>
+		<!--Fim do campo e botão de pesquisa-->
+
+		<!--Tabela de consulta (estática)-->
+		<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Patrimônio</th>
+				<th scope="col">Responsável</th>
+				<th scope="col">Tipo</th>
+				<th scope="col">Data</th>
+				<th scope="col">Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">1</th>
+				<td>123456</td>
+				<td>João da Silva</td>
+				<td>Computador</td>
+				<td>04-09-2018</td>
+				<td>Ativo</td>
+			</tr>
+		</tbody>	  
+		</table>
+		<!--Fim da tabela de consulta-->
+
+		<!--Links dos scripts js-->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 </html>
