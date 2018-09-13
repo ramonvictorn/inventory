@@ -7,7 +7,7 @@ function init(app){
     
     app.get('/cadastro', controllers.cadastro);
 
-    
+    app.get('/consulta/:tipo', controllers.consulta)
     // app.get('/login', function(req, res) {
     //     console.log('/login acessada');
     //     //res.send('rota login acessada');
